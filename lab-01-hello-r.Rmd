@@ -18,3 +18,8 @@ library(datasauRus)
 ### Lab Exercise
 
 some data in tabel
+
+#answer Exercise 2
+dino_data<-datasaurus_dozen%>%filter(dataset=="dino")
+ggplot(data=dino_data,mapping = aes(x = x, y = y)) + geom_point()
+ dino_data%>%summarize(r = cor(x, y))
